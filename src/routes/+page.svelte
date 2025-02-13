@@ -138,7 +138,7 @@
     </div>
   </div>
 
-  <div class="flex flex-col w-11/12 m-auto mt-8">
+  <div class="flex flex-col lg:w-1/3 w-11/12 m-auto mt-8">
     <img
       src="/Fotos/who.webp"
       class="rounded-[15%] my-4"
@@ -160,11 +160,11 @@
 
   <div id="teacher" class="flex flex-col bg-[#f7f7f7] mt-4">
     <img
-      class="rounded-[15%] w-11/12 m-auto my-8"
+      class="rounded-[15%] lg:w-1/3 w-11/12 m-auto my-8"
       src="/Fotos/iam.webp"
       alt="Quem sou eu"
     />
-    <div class="gap-4 w-11/12 m-auto">
+    <div class="gap-4 lg:w-1/3 w-11/12 m-auto">
       <h1 class="text-2xl">
         Quem é <span class="text-[#ff8c02] font-bold">Yan Stark?</span>
       </h1>
@@ -191,7 +191,7 @@
     <a
       href="https://wa.me/5581985777066?text=Fala%20Yan!!%20Quero%20aprender%20a%20evangelizar%20com%20ousadia!"
       target="_blank"
-      class="bg-[#FF8C02] cursor-pointer w-11/12 m-auto text-white rounded-md p-3 text-sm font-light my-8 text-center block"
+      class="bg-[#FF8C02] cursor-pointer lg:w-1/3 w-11/12 m-auto text-white rounded-md p-3 text-sm font-light my-8 text-center block"
     >
       Quero me inscrever agora
     </a>
@@ -207,7 +207,7 @@
       </p>
     </div>
     <div
-      class="flex flex-col lg:w-1/3 w-11/12 mt-8 -mb-6 m-auto rounded-lg h-[500px]"
+      class="flex flex-col lg:w-1/3 w-11/12 mt-8 lg:mb-6 -mb-6 m-auto rounded-lg h-[500px]"
     >
       <div
         class="text-black text-lg flex flex-col text-center justify-center font-bold h-[50px] bg-[#ff8c02] rounded-t-2xl"
@@ -216,9 +216,9 @@
       </div>
       <div class="text-black bg-white rounded-b-2xl">
         <div
-          class="m-auto flex flex-col w-1/4 text-end items-end justify-center mt-6"
+          class="m-auto flex flex-col text-center items-center justify-center mt-6"
         >
-          <p class="font-light text-sm -mb-4">6x de R$</p>
+          <p class="font-light text-sm w-24 justify-end flex -mb-4">6x de R$</p>
           <h1
             class=" text-[50px] font-bold flex items-center justify-center text-center"
           >
@@ -226,16 +226,20 @@
           </h1>
         </div>
         <p class="text-center text-[#888]">ou R$ 47,00 à vista</p>
-        <ul class="list-none flex flex-col mt-8 space-y-4 gap-2">
+        <ul class="list-none flex flex-col mt-8 gap-4">
           {#each card as item}
-            <li class="flex items-center justify-center m-auto w-2/3 space-x-2">
-              <span
-                class="flex items-center justify-center min-w-4 min-h-4 text-xs rounded-full bg-[#ff8c02] text-white"
-                >✓</span
-              >
-              <span class="font-light">{item.text}</span>
-            </li>
-            <span class="border-t border-gray-300 w-10/12 m-auto"></span>
+            <div class="flex flex-col items-center justify-center w-full">
+              <li class="flex items-center justify-between w-1/3 gap-x-2">
+                <span
+                  class="flex items-center justify-center min-w-4 min-h-4 text-xs rounded-full bg-[#ff8c02] text-white"
+                  >✓</span
+                >
+                <span class="font-light text-center whitespace-nowrap"
+                  >{item.text}</span
+                >
+              </li>
+              <span class="border-t border-gray-300 w-10/12"></span>
+            </div>
           {/each}
           <a
             href="https://wa.me/5581985777066?text=Fala%20Yan!!%20Quero%20aprender%20a%20evangelizar%20com%20ousadia!"
