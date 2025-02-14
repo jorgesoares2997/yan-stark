@@ -217,7 +217,7 @@
       </p>
     </div>
     <div
-      class="flex flex-col lg:w-1/3 w-11/12 mt-8 lg:mb-6 -mb-6 m-auto rounded-lg h-[500px]"
+      class="flex flex-col lg:w-1/3 w-11/12 mt-8 lg:mb-6 mb-4 m-auto rounded-lg h-[500px]"
     >
       <div
         class="text-black text-lg flex flex-col text-center justify-center font-bold h-[50px] bg-[#ff8c02] rounded-t-2xl"
@@ -228,7 +228,11 @@
         <div
           class="m-auto flex flex-col text-center items-center justify-center mt-6"
         >
-          <p class="font-light text-sm w-24 justify-end flex -mb-4">6x de R$</p>
+          <p
+            class="font-light text-sm w-24 justify-end flex -mb-4 whitespace-nowrap"
+          >
+            Apenas 6x de R$
+          </p>
           <h1
             class=" text-[50px] font-bold flex items-center justify-center text-center"
           >
@@ -239,7 +243,7 @@
         <ul class="list-none flex flex-col mt-8 gap-4">
           {#each card as item}
             <div class="flex flex-col items-center justify-center w-full">
-              <li class="flex items-center justify-between w-1/3 gap-x-2">
+              <li class="flex items-center justify-between lg:w-1/3 gap-x-2">
                 <span
                   class="flex items-center justify-center min-w-4 min-h-4 text-xs rounded-full bg-[#ff8c02] text-white"
                   >✓</span
@@ -258,6 +262,9 @@
           >
             Quero me inscrever agora
           </a>
+          <p class="p-4 text-xs text-gray-400">
+            * Todos os valores serão convertidos para a manutenção de missões.
+          </p>
         </ul>
       </div>
     </div>

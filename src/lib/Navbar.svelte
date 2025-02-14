@@ -20,8 +20,10 @@
   }
 </script>
 
-<nav class="bg-black text-white h-16 p-4 shadow-lg fixed top-0 left-0 w-full z-50 flex justify-between items-center">
-  <a href="/" class="text-2xl hidden lg:flex font-bold">Yan Stark</a>
+<nav
+  class="bg-black text-white h-16 p-4 shadow-lg fixed top-0 left-0 w-full z-50 flex justify-between items-center"
+>
+  <a  href="/" class="text-2xl hidden lg:flex font-bold">Yan Stark</a>
   <ul class="flex space-x-6 lg:w-1/3 w-full justify-between text-right">
     {#each links as link}
       <li>
