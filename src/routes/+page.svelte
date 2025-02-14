@@ -258,7 +258,7 @@
           <a
             href="https://wa.me/5581985777066?text=Fala%20Yan!!%20Quero%20aprender%20a%20evangelizar%20com%20ousadia!"
             target="_blank"
-            class="bg-[#FF8C02] cursor-pointer w-11/12 m-auto text-white rounded-md p-3 text-sm font-light my-8 text-center block"
+            class="bg-[#FF8C02] cursor-pointer w-11/12 m-auto text-white rounded-md p-3 text-sm font-light mt-8 text-center block"
           >
             Quero me inscrever agora
           </a>
