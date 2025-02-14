@@ -3,7 +3,17 @@
     question: string;
     answer: string;
   }
+  import AOS from "aos";
+  import "aos/dist/aos.css";
+  import { onMount } from "svelte";
 
+  onMount(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+    });
+  });
   let faqs: FAQItem[] = [
     {
       question: "O curso é online?",
@@ -89,7 +99,7 @@
 </script>
 
 <div class="">
-  <div id="inicio" class="grid bg-black text-white">
+  <div id="inicio" class="grid bg-black text-white" data-aos="fade-down">
     <div class="flex m-auto w-11/12 items-center justify-center">
       <img src="/Fotos/head.png" alt="Yan stark" />
     </div>
@@ -138,7 +148,7 @@
     </div>
   </div>
 
-  <div class="flex flex-col lg:w-1/3 w-11/12 m-auto mt-8">
+  <div class="flex flex-col lg:w-1/3 w-11/12 m-auto mt-8" data-aos="fade-up">
     <img
       src="/Fotos/who.webp"
       class="rounded-[15%] my-4"
@@ -158,7 +168,7 @@
     </ul>
   </div>
 
-  <div id="teacher" class="flex flex-col bg-[#f7f7f7] mt-4">
+  <div id="teacher" class="flex flex-col bg-[#f7f7f7] mt-4" data-aos="fade-up">
     <img
       class="rounded-[15%] lg:w-1/3 w-11/12 m-auto my-8"
       src="/Fotos/iam.webp"
@@ -197,7 +207,7 @@
     </a>
   </div>
 
-  <div id="plano" class="bg-black flex flex-col text-white">
+  <div id="plano" class="bg-black flex flex-col text-white" data-aos="fade-up">
     <div class="mt-8">
       <h1 class="m-auto text-center text-xl">Invista no seu Chamado!</h1>
       <p class="font-light m-auto w-11/12 text-center">
