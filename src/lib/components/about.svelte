@@ -92,7 +92,7 @@
   </div>
 </div>
 
-<div class="lg:flex w-11/12 m-auto justify-between mt-8" data-aos="fade-up">
+<div class="lg:flex w-11/12 m-auto justify-between mt-8" data-aos="fade-right">
   <div class="w-11/12 m-auto lg:w-1/2">
     <img
       src="/Fotos/who.webp"

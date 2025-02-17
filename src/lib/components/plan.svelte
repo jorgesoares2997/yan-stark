@@ -10,7 +10,7 @@
   ];
 </script>
 
-<div id="plano" class="bg-black flex flex-col text-white" data-aos="fade-up">
+<div id="plano" class="bg-black flex flex-col text-white">
   <div class="mt-8">
     <h1 class="m-auto text-center text-xl">Invista no seu Chamado!</h1>
     <p class="font-light m-auto w-11/12 text-center">

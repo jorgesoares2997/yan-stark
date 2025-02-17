@@ -1,5 +1,5 @@
 <div class="flex lg:flex-col bg-[#f7f7f7] mt-4">
-  <div id="teacher" class="lg:flex w-11/12 m-auto" data-aos="fade-up">
+  <div id="teacher" class="lg:flex w-11/12 m-auto" data-aos="fade-left">
     <div class="flex m-auto lg:hidden w-11/12 lg:w-1/2">
       <img
         class="rounded-[15%] w-11/12 m-auto my-8"
