@@ -6,6 +6,8 @@
   import { onMount } from "svelte";
 
   let swiperEl: any;
+  let prevEl: HTMLElement | null;
+  let nextEl: HTMLElement | null;
 
   const slides = [
     { id: 1, image: "/carroussel/1.PNG" },
@@ -22,23 +24,48 @@
   ];
 
   onMount(() => {
-    new Swiper(swiperEl, {
+    prevEl = document.querySelector(".swiper-button-prev");
+    nextEl = document.querySelector(".swiper-button-next");
+
+    const swiper = new Swiper(swiperEl, {
       modules: [Navigation],
-      slidesPerView: 3,
-      spaceBetween: 20,
+      slidesPerView: 1.2, // Padrão para telas pequenas
+      spaceBetween: 10,
       loop: true,
-      navigation: true,
+      navigation: {
+        nextEl,
+        prevEl,
+      },
+      breakpoints: {
+        640: { slidesPerView: 2, spaceBetween: 15 }, // Tablet
+        1024: { slidesPerView: 3, spaceBetween: 20 }, // Desktop médio
+        1280: { slidesPerView: 4, spaceBetween: 25 }, // Desktop grande
+      },
     });
+
+    // Remover as setas em telas grandes
+    const updateNavigation = () => {
+      const isLargeScreen = window.innerWidth >= 1024; // lg breakpoint
+      if (prevEl && nextEl) {
+        prevEl.style.display = isLargeScreen ? "block" : "none";
+        nextEl.style.display = isLargeScreen ? "block" : "none";
+      }
+    };
+
+    updateNavigation(); // Aplicar no carregamento
+    window.addEventListener("resize", updateNavigation);
+
+    return () => window.removeEventListener("resize", updateNavigation);
   });
 </script>
 
-<div class="text-center w-11/12 m-auto">
+<div class="bg-black p-4 text-center m-auto">
   <div class="mt-6">
     <div bind:this={swiperEl} class="swiper">
       <div class="swiper-wrapper">
         {#each slides as slide}
           <div
-            class="swiper-slide flex items-center justify-center rounded-xl shadow-lg bg-red-600 overflow-hidden"
+            class="swiper-slide flex items-center justify-center rounded-xl shadow-lg bg-[#FF8C02] overflow-hidden"
           >
             <img
               src={slide.image}
@@ -49,7 +76,7 @@
         {/each}
       </div>
 
-      <!-- Botões de navegação -->
+      <!-- Botões de navegação (somem no lg) -->
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
